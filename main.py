@@ -1,4 +1,6 @@
 import pprint
+import random
+
 with open("codes.txt") as file:
     contents = file.readlines()
 
@@ -26,14 +28,14 @@ for numbers in contents:
 print(unique)
 
 with open("favorites.txt", "w") as file:
-    file.write("GOOD\n")
+    file.write("GOOD SHIT\n")
     for code in basic:
         if "â˜†" in code:
             file.write(f"{code}\n")
     for code in basic:
         if "â˜…" in code:
             file.write(f"{code}\n")
-    file.write("BEST\n")
+    file.write("INSTANT NUT\n")
     for code in instant:
         file.write(f"{code}\n")
     file.write("UNIQUE\n")
@@ -47,3 +49,7 @@ with open("instant.txt", "w") as file:
 with open("unique.txt", "w") as file:
     for code in unique:
         file.write(f"{code}\n")
+
+with open("random.txt", "w") as file:
+    for code in range(len(fave)):
+        file.write(f"{fave[code]}\n")
