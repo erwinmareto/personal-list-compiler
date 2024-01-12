@@ -50,6 +50,20 @@ with open("unique.txt", "w") as file:
     for code in unique:
         file.write(f"{code}\n")
 
-with open("random.txt", "w") as file:
+number_u = []
+with open("random2.txt", "w") as file:
     for code in range(len(fave)):
-        file.write(f"{fave[code]}\n")
+        # print(random.randint(1, len(fave)))
+        ran_val = random.randint(1, len(fave) - 1)
+        if ran_val not in number_u:
+            print(fave[ran_val])
+            number_u.append(ran_val)
+            file.write(f"{fave[ran_val]}\n")
+        # else:
+        #     print("dupe")
+        # file.write(f"{fave[code]}\n")
+print(number_u)
+
+
+
+
